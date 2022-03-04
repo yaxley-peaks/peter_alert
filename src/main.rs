@@ -4,7 +4,7 @@ extern crate native_windows_derive as nwd;
 extern crate native_windows_gui as nwg;
 use std::cell::RefCell;
 
-use peter_alert::{PATH, prepare_image};
+use peter_alert::{PATH, prepare_image, get_ico};
 use nwd::NwgUi;
 use nwg::NativeUi;
 
@@ -72,6 +72,7 @@ impl PeterAlert {
     }
 }
 fn main() {
+    // get_ico(); //this doesnt work for some reason
     nwg::init().expect("Failed to init Native Windows GUI");
     nwg::Font::set_global_family("Segoe UI").expect("Failed to set default font");
 
